@@ -4,9 +4,7 @@
     "project": "tsconfig.json",
     "sourceType": "module"
   },
-  "plugins": [
-    "@typescript-eslint/eslint-plugin"
-  ],
+  "plugins": ["@typescript-eslint/eslint-plugin"],
   "extends": [
     "airbnb-typescript/base",
     "prettier",
@@ -36,10 +34,7 @@
     "semi": "off",
     "no-underscore-dangle": "off",
     "class-methods-use-this": "off",
-    "curly": [
-      "error",
-      "all"
-    ],
+    "curly": ["error", "all"],
     "import/prefer-default-export": "off",
     "array-callback-return": "error",
     "brace-style": [
@@ -55,10 +50,7 @@
     "no-empty-pattern": "error",
     "no-magic-numbers": "off",
     "no-unused-vars": "error",
-    "object-shorthand": [
-      "error",
-      "always"
-    ],
+    "object-shorthand": ["error", "always"],
     "space-before-blocks": "error",
     "@typescript-eslint/array-type": "error",
     "@typescript-eslint/ban-ts-comment": "off",
@@ -71,31 +63,18 @@
     ],
     "@typescript-eslint/interface-name-prefix": "off",
     "@typescript-eslint/naming-convention": [
-      "error",
       {
         "selector": "default",
-        "format": [
-          "camelCase"
-        ]
+        "format": ["camelCase"]
       },
       {
         "selector": "variable",
-        "types": [
-          "function"
-        ],
-        "format": [
-          "camelCase",
-          "PascalCase"
-        ]
+        "types": ["function"],
+        "format": ["camelCase", "PascalCase"]
       },
       {
         "selector": "variable",
-        "format": [
-          "camelCase",
-          "UPPER_CASE",
-          "PascalCase",
-          "snake_case"
-        ],
+        "format": ["camelCase", "UPPER_CASE", "PascalCase", "snake_case"],
         "filter": {
           "regex": "^(.*-.*.*_.*)$",
           "match": false
@@ -104,25 +83,15 @@
       },
       {
         "selector": "enumMember",
-        "format": [
-          "camelCase",
-          "PascalCase",
-          "UPPER_CASE"
-        ]
+        "format": ["camelCase", "PascalCase", "UPPER_CASE"]
       },
       {
         "selector": "parameter",
-        "format": [
-          "camelCase",
-          "snake_case"
-        ]
+        "format": ["camelCase", "snake_case"]
       },
       {
         "selector": "memberLike",
-        "format": [
-          "camelCase",
-          "snake_case"
-        ],
+        "format": ["camelCase", "snake_case"],
         "leadingUnderscore": "allow"
       },
       {
@@ -131,19 +100,13 @@
       },
       {
         "selector": "memberLike",
-        "modifiers": [
-          "private"
-        ],
-        "format": [
-          "camelCase"
-        ],
+        "modifiers": ["private"],
+        "format": ["camelCase"],
         "leadingUnderscore": "require"
       },
       {
         "selector": "typeLike",
-        "format": [
-          "PascalCase"
-        ]
+        "format": ["PascalCase"]
       }
     ],
     "@typescript-eslint/no-explicit-any": [
@@ -163,20 +126,11 @@
         "ignoreArrayIndexes": true,
         "ignoreNumericLiteralTypes": true,
         "ignoreReadonlyClassProperties": true,
-        "ignore": [
-          0,
-          1
-        ]
+        "ignore": [0, 1]
       }
     ],
-    "@typescript-eslint/return-await": [
-      "error",
-      "always"
-    ],
-    "@typescript-eslint/semi": [
-      "error",
-      "never"
-    ],
+    "@typescript-eslint/return-await": ["error", "always"],
+    "@typescript-eslint/semi": ["error", "never"],
     "import/order": [
       "warn",
       {
@@ -197,7 +151,5 @@
     ],
     "no-restricted-syntax": "off"
   },
-  "ignorePatterns": [
-    ".eslintrc.js"
-  ]
+  "ignorePatterns": [".eslintrc.js"]
 }
