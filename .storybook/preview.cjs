@@ -1,9 +1,11 @@
 import theme from '../src/app/theme'
+import { ChakraProviderDecorator } from "@chakra-ui/storybook-addon/dist/feature/decorator/ChakraProviderDecorator";
+
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   chakra: {
-    theme,
+    theme
   },
   controls: {
     matchers: {
@@ -12,3 +14,7 @@ export const parameters = {
     },
   },
 }
+
+export const decorators = [
+  ChakraProviderDecorator,
+];
