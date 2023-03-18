@@ -198,6 +198,7 @@
     "no-restricted-syntax": "off"
   },
   "ignorePatterns": [
-    ".eslintrc.js"
+    ".eslintrc.js",
+    "src/**/*.test.ts*"
   ]
 }
