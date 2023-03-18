@@ -9,7 +9,9 @@
     "preview": "vite preview",
     "prepare": "husky install",
     "format": "prettier --write \"src/**/*.ts*\"",
-    "lint": "eslint \"src/**/*.ts*\" --fix"
+    "lint": "eslint \"src/**/*.ts*\" --fix",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.5.1",
@@ -21,13 +23,23 @@
     "react-router-dom": "^6.8.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.21.3",
+    "@chakra-ui/storybook-addon": "^4.0.16",
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-interactions": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/builder-vite": "^0.4.2",
+    "@storybook/react": "^6.5.16",
+    "@storybook/testing-library": "^0.0.13",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@typescript-eslint/eslint-plugin": "^5.49.0",
     "@typescript-eslint/parser": "^5.49.0",
     "@vitejs/plugin-react": "^3.1.0",
+    "babel-loader": "^8.3.0",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "^8.33.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
