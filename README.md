@@ -87,31 +87,36 @@ export default getNumberWithPercent
 ```
 
 ### Стори
-Перейдем к волшебству, с которым я сам только только разобрался.
+Перейдем к волшебству, с которым я сам только-только разобрался.
 
 Чтобы его запустить надо написать ``yarn storybook``
 
 Стори создается в той же папке, что и компонент, но только с припиской stoies. То есть ``CircleWithPercent.stories.tsx``.
 
 ```tsx
-import {ComponentStory, ComponentMeta} from '@storybook/react'
+import type {Meta, StoryObj} from '@storybook/react'
 
 import CircleWithPercent from './CircleWithPercent'
 
-export default {
+const meta: Meta<typeof CircleWithPercent> = {
   title: 'entities/Challenge/CircleWithPercent',
   component: CircleWithPercent,
+  tags: ['autodocs'],
   args: {
     percent: 45
   },
   argTypes: {
-    percent: {control: 'number'}
+    percent: {control: 'number', description: 'How many percent'}
   }
-} as ComponentMeta<typeof CircleWithPercent>
+}
 
-export const Primary: ComponentStory<typeof CircleWithPercent> = args => (
-  <CircleWithPercent {...args} />
-)
+export default meta
+type Story = StoryObj<typeof CircleWithPercent>
+
+export const Primary: Story = {
+  render: args => <CircleWithPercent {...args} />
+}
+
 ```
 
 Сложно как-то объяснять, что ты и сам только недавно понял, но в общем тут указываете название компонента, с папочками все как полагается. Потом желательно указать нужные дефолтные аргументы для компонента. Еще можно настроить контроль изменения значения. 
