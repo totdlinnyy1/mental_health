@@ -1,18 +1,22 @@
-import {ComponentStory, ComponentMeta} from '@storybook/react'
+import type {Meta, StoryObj} from '@storybook/react'
 
 import CircleWithPercent from './CircleWithPercent'
 
-export default {
+const meta: Meta<typeof CircleWithPercent> = {
   title: 'entities/Challenge/CircleWithPercent',
   component: CircleWithPercent,
+  tags: ['autodocs'],
   args: {
     percent: 45
   },
   argTypes: {
-    percent: {control: 'number'}
+    percent: {control: 'number', description: 'How many percent'}
   }
-} as ComponentMeta<typeof CircleWithPercent>
+}
 
-export const Primary: ComponentStory<typeof CircleWithPercent> = args => (
-  <CircleWithPercent {...args} />
-)
+export default meta
+type Story = StoryObj<typeof CircleWithPercent>
+
+export const Primary: Story = {
+  render: args => <CircleWithPercent {...args} />
+}
