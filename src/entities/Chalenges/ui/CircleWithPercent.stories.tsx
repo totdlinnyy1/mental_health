@@ -3,7 +3,7 @@ import type {Meta, StoryObj} from '@storybook/react'
 import CircleWithPercent from './CircleWithPercent'
 
 const meta: Meta<typeof CircleWithPercent> = {
-  title: 'entities/Challenge/CircleWithPercent',
+  title: 'Hello world!',
   component: CircleWithPercent,
   tags: ['autodocs'],
   args: {
