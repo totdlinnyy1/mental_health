@@ -1,6 +1,6 @@
 import type {Preview} from '@storybook/react'
-import { ChakraProviderDecorator } from "@chakra-ui/storybook-addon/dist/feature/decorator/ChakraProviderDecorator";
-import theme from '../src/app/theme/index'
+import {ChakraProviderDecorator} from '@chakra-ui/storybook-addon/dist/feature/decorator/ChakraProviderDecorator'
+import theme from '../src/theme'
 
 const preview: Preview = {
   parameters: {
@@ -15,9 +15,7 @@ const preview: Preview = {
       }
     }
   },
-  decorators: [
-    ChakraProviderDecorator
-  ]
+  decorators: [ChakraProviderDecorator]
 }
 
 export default preview
