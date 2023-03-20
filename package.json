@@ -20,7 +20,8 @@
     "framer-motion": "^10.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.8.1"
+    "react-router-dom": "^6.8.1",
+    "zustand": "^4.3.6"
   },
   "devDependencies": {
     "@chakra-ui/storybook-addon": "^4.0.16",
