@@ -1,8 +1,8 @@
 import {Box} from '@chakra-ui/react'
 import {ComponentType} from 'react'
 
-const Start: ComponentType = () => {
+const StartPage: ComponentType = () => {
   return <Box></Box>
 }
 
-export default Start
+export default StartPage
