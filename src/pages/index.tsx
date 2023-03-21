@@ -7,7 +7,7 @@ import {
 import Start from './start'
 
 const router = createBrowserRouter(
-  createRoutesFromElements(<Route path='/' element={<Start path={'/'} />} />)
+  createRoutesFromElements(<Route path='/' element={<Start />} />)
 )
 
 export default router
