@@ -1,17 +1,8 @@
-import {ChakraProvider} from '@chakra-ui/react'
 import {createRoot} from 'react-dom/client'
-import {QueryClient, QueryClientProvider} from 'react-query'
 import {RouterProvider} from 'react-router-dom'
 
-import theme from './app/theme/theme'
-import router from './pages'
-
-const queryClient = new QueryClient()
+import router from './router/router'
 
 createRoot(document.getElementById('root') as HTMLElement).render(
-  <QueryClientProvider client={queryClient}>
-    <ChakraProvider theme={theme}>
-      <RouterProvider router={router} />
-    </ChakraProvider>
-  </QueryClientProvider>
+  <RouterProvider router={router} />
 )

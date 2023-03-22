@@ -4,10 +4,10 @@ import {
   Route
 } from 'react-router-dom'
 
-import Start from './start'
+import App from '../App'
 
 const router = createBrowserRouter(
-  createRoutesFromElements(<Route path='/' element={<Start />} />)
+  createRoutesFromElements(<Route path='/' element={<App />} />)
 )
 
 export default router
