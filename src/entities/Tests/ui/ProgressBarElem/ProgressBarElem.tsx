@@ -3,7 +3,7 @@ import {ComponentType} from 'react'
 import {IconType} from 'react-icons'
 
 import getNumberWithPercent from '../../../../share/lib/helpers/getNumberWithPercent'
-import {IProgress} from '../types/types'
+import {IProgress} from '../../types/types'
 
 interface IProps extends IProgress {
   icon: IconType
