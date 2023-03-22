@@ -200,6 +200,7 @@
   },
   "ignorePatterns": [
     ".eslintrc.js",
-    "src/**/*.test.ts*"
+    "src/**/*.test.ts*",
+    "src/**/*.stories.ts*"
   ]
 }
