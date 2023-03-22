@@ -1,7 +1,10 @@
 import {Box, Button, Heading, Text} from '@chakra-ui/react'
 import {ComponentType} from 'react'
 
+import useEnterTestStore from '../../lib/hooks/useEnterTestStore'
+
 const StartTestButton: ComponentType = () => {
+  const {onOpen} = useEnterTestStore()
   return (
     <Box>
       <Heading as='h2' margin='5'>
@@ -11,7 +14,7 @@ const StartTestButton: ComponentType = () => {
         Чтобы построить диаграмму ментального здоровья, нужно пройти небольшой
         тест
       </Text>
-      <Button colorScheme='blue' margin='5'>
+      <Button colorScheme='blue' margin='5' onClick={onOpen}>
         Начать тестирование
       </Button>
     </Box>
