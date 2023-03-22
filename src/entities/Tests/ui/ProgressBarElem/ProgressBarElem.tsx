@@ -3,16 +3,13 @@ import {ComponentType} from 'react'
 import {IconType} from 'react-icons'
 
 import getNumberWithPercent from '../../../../share/lib/helpers/getNumberWithPercent'
+import {IProgress} from '../types/types'
 
-interface IProps {
-  wish: number
-  current: number
+interface IProps extends IProgress {
   icon: IconType
 }
 
-const ProgressBarElem: ComponentType<IProps> = data => {
-  const {wish, current, icon} = data
-
+const ProgressBarElem: ComponentType<IProps> = ({wish, current, icon}) => {
   return (
     <Flex direction='column' justify='space-between' gap='10px'>
       <Flex pos='relative' w='18px' h='113px' bgColor='#1A8DE640'>
@@ -24,7 +21,6 @@ const ProgressBarElem: ComponentType<IProps> = data => {
               ? getNumberWithPercent(wish)
               : getNumberWithPercent(current)
           }
-          // h={wish < current ? current : wish}}
           bgColor='#1A8DE680'
           bottom='0'
         />

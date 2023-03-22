@@ -1,19 +1,19 @@
 import type {Meta, StoryObj} from '@storybook/react'
-import {BsEmojiKiss} from 'react-icons/bs'
-import {FaBasketballBall} from 'react-icons/fa'
-import {FcLike, FcBriefcase} from 'react-icons/fc'
+import {AiFillHeart} from 'react-icons/ai'
+import {MdGroup} from 'react-icons/md'
+import {IoMdBriefcase, IoMdColorPalette} from 'react-icons/io'
 
 import ProgressBarElem from './ProgressBarElem'
 
 const icons = {
-  FcBriefcase,
-  BsEmojiKiss,
-  FcLike,
-  FaBasketballBall
+  IoMdBriefcase,
+  MdGroup,
+  AiFillHeart,
+  IoMdColorPalette
 }
 
 const meta: Meta<typeof ProgressBarElem> = {
-  title: 'entities/EnterTest/ProgressBarElem',
+  title: 'entities/Tests/ProgressBarElem',
   component: ProgressBarElem,
   tags: ['autodocs'],
   args: {
@@ -29,13 +29,13 @@ const meta: Meta<typeof ProgressBarElem> = {
       control: {
         type: 'radio',
         labels: {
-          FcBriefcase: 'case',
-          BsEmojiKiss: 'relationship',
-          FcLike: 'health',
-          FaBasketballBall: 'creativity'
+          IoMdBriefcase: 'work',
+          MdGroup: 'relationship',
+          AiFillHeart: 'health',
+          IoMdColorPalette: 'creativity'
         }
       },
-      description: 'Change image'
+      description: 'What icon'
     }
   }
 }
