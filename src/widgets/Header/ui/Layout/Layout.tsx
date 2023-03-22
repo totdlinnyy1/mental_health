@@ -7,7 +7,7 @@ interface IProps {
 
 const Layout: ComponentType<IProps> = ({children}) => {
   return (
-    <Box h='16' w='full' bgColor='blue.100'>
+    <Box h='16' w='full' bgColor='#F4F9FE'>
       <HStack h='16' w='full' justifyContent='space-between' px={6}>
         {children}
       </HStack>

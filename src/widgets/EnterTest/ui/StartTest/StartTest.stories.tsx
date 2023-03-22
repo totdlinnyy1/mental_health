@@ -2,7 +2,7 @@ import type {Meta, StoryObj} from '@storybook/react'
 
 import StartTestButton from './StartTest'
 const meta: Meta<typeof StartTestButton> = {
-  title: 'share/buttons/StartTestButton',
+  title: 'widgets/EnterTest/StartTestButton',
   component: StartTestButton,
   tags: ['autodocs']
 }
