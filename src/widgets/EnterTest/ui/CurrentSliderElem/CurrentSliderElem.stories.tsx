@@ -1,5 +1,5 @@
 import type {Meta, StoryObj} from '@storybook/react'
-import SliderElem from './SliderElem'
+import CurrentSliderElem from './CurrentSliderElem'
 import {AiFillHeart} from 'react-icons/ai'
 import {MdGroup} from 'react-icons/md'
 import {IoMdBriefcase, IoMdColorPalette} from 'react-icons/io'
@@ -13,9 +13,9 @@ const icons = {
 
 const titles = ['Работа', 'Отношения', 'Здоровье', 'Творчество']
 
-const meta: Meta<typeof SliderElem> = {
-  title: 'widgets/EnterTest/SliderElem',
-  component: SliderElem,
+const meta: Meta<typeof CurrentSliderElem> = {
+  title: 'widgets/EnterTest/CurrentSliderElem',
+  component: CurrentSliderElem,
   tags: ['autodocs'],
   args: {
     icon: IoMdBriefcase,
@@ -40,14 +40,13 @@ const meta: Meta<typeof SliderElem> = {
       options: titles,
       description: 'What text',
       control: 'select'
-    },
-    current: {control: 'number', description: 'How many current'}
+    }
   }
 }
 
 export default meta
-type Story = StoryObj<typeof SliderElem>
+type Story = StoryObj<typeof CurrentSliderElem>
 
 export const Primary: Story = {
-  render: args => <SliderElem {...args} />
+  render: args => <CurrentSliderElem {...args} />
 }
