@@ -1,4 +1,4 @@
-import {Box} from '@chakra-ui/react'
+import {Box, Flex} from '@chakra-ui/react'
 import {ComponentType, useEffect, useState} from 'react'
 import {AiFillHeart} from 'react-icons/ai'
 import {IoMdBriefcase, IoMdColorPalette} from 'react-icons/io'
@@ -28,20 +28,27 @@ const SlidersWish: ComponentType<IProps> = ({data}) => {
   return (
     <Box h='356px'>
       <Box fontWeight='bold' mb='24px'>
-        Отметь свое текущее состояние на шкалах
+        Отметь на шкалах свой желаемый уровень по каждой сфере
       </Box>
-      <SliderElem {...currentData.health} icon={AiFillHeart} title='Здоровье' />
-      <SliderElem
-        {...currentData.relationship}
-        icon={MdGroup}
-        title='Отношения'
-      />
-      <SliderElem {...currentData.work} icon={IoMdBriefcase} title='Работа' />
-      <SliderElem
-        {...currentData.creativity}
-        icon={IoMdColorPalette}
-        title='Творчество'
-      />
+      <Flex direction='column' gap='15px'>
+        <SliderElem
+          {...currentData.health}
+          icon={AiFillHeart}
+          title='Здоровье'
+        />
+        <SliderElem
+          {...currentData.relationship}
+          icon={MdGroup}
+          title='Отношения'
+        />
+        <SliderElem {...currentData.work} icon={IoMdBriefcase} title='Работа' />
+        <SliderElem
+          {...currentData.creativity}
+          icon={IoMdColorPalette}
+          title='Творчество'
+        />
+      </Flex>
+
       <Box padding='8px 0 0 14px'></Box>
     </Box>
   )

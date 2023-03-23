@@ -40,7 +40,8 @@ const meta: Meta<typeof SliderElem> = {
       options: titles,
       description: 'What text',
       control: 'select'
-    }
+    },
+    current: {control: 'number', description: 'How many current'}
   }
 }
 
