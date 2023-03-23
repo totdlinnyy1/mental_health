@@ -122,7 +122,8 @@
         "selector": "memberLike",
         "format": [
           "camelCase",
-          "snake_case"
+          "snake_case",
+          "PascalCase"
         ],
         "leadingUnderscore": "allow"
       },
