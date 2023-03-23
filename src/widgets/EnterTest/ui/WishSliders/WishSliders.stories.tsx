@@ -6,16 +6,12 @@ const meta: Meta<typeof WishSliders> = {
   component: WishSliders,
   tags: ['autodocs'],
   args: {
-    health: 34,
-    relationship: 10,
-    work: 56,
-    creativity: 20
-  },
-  argTypes: {
-    health: {description: 'How many current health'},
-    relationship: {description: 'How many current relationship'},
-    work: {description: 'How many current work'},
-    creativity: {description: 'How many current creativity'}
+    data: {
+      health: {current: 34, wish: 56},
+      relationship: {current: 23, wish: 57},
+      work: {current: 24, wish: 70},
+      creativity: {current: 24, wish: 90}
+    }
   }
 }
 
