@@ -1,11 +1,17 @@
 import {Box, Button, HStack, Text, VStack} from '@chakra-ui/react'
 import {ComponentType} from 'react'
+import {useNavigate} from 'react-router-dom'
 
 import {ProgressBar} from '../../../../../entities/Tests'
 import useEnterTestStore from '../../../lib/hooks/useEnterTestStore'
 
 const ResultStage: ComponentType = () => {
   const store = useEnterTestStore()
+
+  const navigate = useNavigate()
+
+  const handleClick = (): void => navigate('/dashboard')
+
   return (
     <Box>
       <VStack bgColor='blue.100' py={4} borderRadius='base'>
@@ -28,7 +34,7 @@ const ResultStage: ComponentType = () => {
           <Text>{`${store.creativity.current} из ${store.creativity.wish}`}</Text>
         </HStack>
       </VStack>
-      <Button colorScheme='blue' mt={10} onClick={store.onClose}>
+      <Button colorScheme='blue' mt={10} onClick={handleClick}>
         Сохранить результат
       </Button>
     </Box>
