@@ -1,15 +1,5 @@
 import type {Meta, StoryObj} from '@storybook/react'
-import {BsEmojiKiss} from 'react-icons/bs'
-import {FaBasketballBall} from 'react-icons/fa'
-import {FcLike, FcBriefcase} from 'react-icons/fc'
 import ProgressBar from './ProgressBar'
-
-const icons = {
-  FcBriefcase,
-  BsEmojiKiss,
-  FcLike,
-  FaBasketballBall
-}
 
 const meta: Meta<typeof ProgressBar> = {
   title: 'entities/Tests/ProgressBar',
