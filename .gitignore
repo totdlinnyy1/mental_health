@@ -34,3 +34,4 @@ storybook-static
 
 # Vercel
 .vercel
+vercel.json
