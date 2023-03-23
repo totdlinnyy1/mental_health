@@ -16,9 +16,8 @@ interface IEnterTestState extends IProgressCategories {
   onClose: () => void
   onNextStage: () => void
   onPrevStage: () => void
-  onSaveCurrent: (data: IProgressCategories) => void
-  onSaveWish: (data: IProgressCategories) => void
-  onSaveResults: () => void
+  onCompleted: () => void
+  onSaveResults: (data: IProgressCategories) => void
 }
 
 const useEnterTestStore = create<IEnterTestState>(set => ({
@@ -39,9 +38,8 @@ const useEnterTestStore = create<IEnterTestState>(set => ({
     set(({stage}) => ({
       stage: getPrevStage(stage, EnterTestStages) as EnterTestStage
     })),
-  onSaveCurrent: (data): void => set(() => ({...data})),
-  onSaveWish: (data): void => set(() => ({...data})),
-  onSaveResults: (): void => set(() => ({isCompleted: true}))
+  onSaveResults: (data): void => set(() => ({...data})),
+  onCompleted: (): void => set(() => ({isCompleted: true}))
 }))
 
 export default useEnterTestStore

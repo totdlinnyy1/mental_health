@@ -6,7 +6,7 @@ import {
   SliderFilledTrack,
   SliderMark,
   SliderThumb,
-  SliderTrack,
+  SliderTrack
 } from '@chakra-ui/react'
 import {ComponentType, useState} from 'react'
 import {IconType} from 'react-icons'
@@ -18,10 +18,21 @@ interface IProps {
   title: string
   icon: IconType
   current: number
+  onChange: (value: number) => void
 }
 
-const WishSliderElem: ComponentType<IProps> = ({icon, title, current}) => {
+const WishSliderElem: ComponentType<IProps> = ({
+  icon,
+  title,
+  current,
+  onChange
+}) => {
   const [sliderValue, setSliderValue] = useState<number>(current)
+
+  const handleChange = (value: number): void => {
+    setSliderValue(value)
+    onChange(value)
+  }
 
   return (
     <HStack py={6} spacing={10}>
@@ -37,12 +48,12 @@ const WishSliderElem: ComponentType<IProps> = ({icon, title, current}) => {
         borderRadius='base'
       >
         <Slider
-          defaultValue={0}
-          onChange={(val): void => setSliderValue(val)}
+          onChange={handleChange}
           focusThumbOnChange={false}
           width={getWidthForSlider(current)}
           min={current}
           colorScheme='cyan'
+          defaultValue={current}
         >
           <SliderMark value={0} mt={5}>
             0%

@@ -15,7 +15,7 @@ const CurrentStage: ComponentType = () => {
   })
 
   const handleClick = (): void => {
-    store.onSaveCurrent(result)
+    store.onSaveResults(result)
     store.onNextStage()
   }
 

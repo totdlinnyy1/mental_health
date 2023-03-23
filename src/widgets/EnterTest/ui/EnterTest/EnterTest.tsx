@@ -36,7 +36,7 @@ const EnterTest: ComponentType = () => {
             <Text>{getDescriptionText(isCompleted)}</Text>
 
             {stage !== 'info' && (
-              <Box py={8}>
+              <Box py={6}>
                 <Stepper
                   activeStep={EnterTestStages.indexOf(stage)}
                   stepCount={EnterTestStages.length - 1}
