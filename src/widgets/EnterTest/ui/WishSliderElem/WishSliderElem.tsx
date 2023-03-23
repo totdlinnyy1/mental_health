@@ -7,7 +7,6 @@ import {
   SliderMark,
   SliderThumb,
   SliderTrack,
-  Text
 } from '@chakra-ui/react'
 import {ComponentType, useState} from 'react'
 import {IconType} from 'react-icons'
@@ -26,18 +25,17 @@ const WishSliderElem: ComponentType<IProps> = ({icon, title, current}) => {
 
   return (
     <HStack py={6} spacing={10}>
-      <HStack spacing={2.5} w='140px'>
+      <HStack spacing={2.5} w='180px'>
         <Icon w='20px' as={icon} />
         <Box>{title}</Box>
       </HStack>
       <HStack
-        justifyContent='space-between'
+        justifyContent='end'
         w='100%'
         h='8px'
         bgColor='blue.500'
         borderRadius='base'
       >
-        <Text mt='12'>0%</Text>
         <Slider
           defaultValue={0}
           onChange={(val): void => setSliderValue(val)}
@@ -46,6 +44,9 @@ const WishSliderElem: ComponentType<IProps> = ({icon, title, current}) => {
           min={current}
           colorScheme='cyan'
         >
+          <SliderMark value={0} mt={5}>
+            0%
+          </SliderMark>
           <SliderMark value={100} mt={5} ml={-10}>
             100%
           </SliderMark>

@@ -16,20 +16,32 @@ import {getNumberWithPercent} from '../../../../share'
 interface IProps {
   title: string
   icon: IconType
+  onChange: (value: number) => void
+  defaultValue?: number
 }
 
-const CurrentSliderElem: ComponentType<IProps> = ({icon, title}) => {
+const CurrentSliderElem: ComponentType<IProps> = ({
+  icon,
+  title,
+  onChange,
+  defaultValue
+}) => {
   const [sliderValue, setSliderValue] = useState<number>(0)
+
+  const handleChange = (value: number): void => {
+    setSliderValue(value)
+    onChange(value)
+  }
 
   return (
     <HStack py={6} spacing={10}>
-      <HStack spacing={2.5} w='140px'>
+      <HStack spacing={2.5} w='180px'>
         <Icon w='20px' as={icon} />
         <Box>{title}</Box>
       </HStack>
       <Slider
-        defaultValue={0}
-        onChange={(val): void => setSliderValue(val)}
+        defaultValue={defaultValue}
+        onChange={handleChange}
         focusThumbOnChange={false}
       >
         <SliderMark value={0} mt={5}>
