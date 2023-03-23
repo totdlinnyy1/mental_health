@@ -2,8 +2,7 @@ import type {Meta, StoryObj} from '@storybook/react'
 import {AiFillHeart} from 'react-icons/ai'
 import {MdGroup} from 'react-icons/md'
 import {IoMdBriefcase, IoMdColorPalette} from 'react-icons/io'
-
-import ProgressBarElem from './ProgressBarElem'
+import WishSliderElem from './WishSliderElem'
 
 const icons = {
   IoMdBriefcase,
@@ -12,18 +11,18 @@ const icons = {
   IoMdColorPalette
 }
 
-const meta: Meta<typeof ProgressBarElem> = {
-  title: 'entities/Tests/ProgressBarElem',
-  component: ProgressBarElem,
+const titles = ['Работа', 'Отношения', 'Здоровье', 'Творчество']
+
+const meta: Meta<typeof WishSliderElem> = {
+  title: 'widgets/EnterTest/WishSliderElem',
+  component: WishSliderElem,
   tags: ['autodocs'],
   args: {
-    wish: 60,
-    current: 50,
-    icon: IoMdBriefcase
+    icon: IoMdBriefcase,
+    title: 'Работа',
+    current: 45
   },
   argTypes: {
-    wish: {control: 'number', description: 'How many wish'},
-    current: {control: 'number', description: 'How many real'},
     icon: {
       options: Object.keys(icons),
       mapping: icons,
@@ -37,13 +36,19 @@ const meta: Meta<typeof ProgressBarElem> = {
         }
       },
       description: 'What icon'
-    }
+    },
+    title: {
+      options: titles,
+      description: 'What text',
+      control: 'select'
+    },
+    current: {control: 'number', description: 'How many current'}
   }
 }
 
 export default meta
-type Story = StoryObj<typeof ProgressBarElem>
+type Story = StoryObj<typeof WishSliderElem>
 
 export const Primary: Story = {
-  render: args => <ProgressBarElem {...args} />
+  render: args => <WishSliderElem {...args} />
 }
