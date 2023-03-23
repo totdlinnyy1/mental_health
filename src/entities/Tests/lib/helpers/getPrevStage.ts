@@ -1,14 +1,14 @@
-import {Stages} from '../../consts/consts'
-import {Stage} from '../../types/types'
+const getNextStage = (
+  currentStage: string,
+  stages: readonly string[]
+): string => {
+  const currentStageIndex = stages.indexOf(currentStage)
 
-const getNextStage = (stage: Stage): Stage => {
-  const curStage = Stages.indexOf(stage)
-
-  if (curStage - 1 > 0) {
-    return Stages[curStage - 1]
+  if (currentStageIndex - 1 > 0) {
+    return stages[currentStageIndex - 1]
   }
 
-  return Stages[0]
+  return stages[0]
 }
 
 export default getNextStage

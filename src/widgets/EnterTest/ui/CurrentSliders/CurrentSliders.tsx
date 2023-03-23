@@ -6,7 +6,7 @@ import {MdGroup} from 'react-icons/md'
 
 import CurrentSliderElem from '../CurrentSliderElem/CurrentSliderElem'
 
-const SlidersCurrent: ComponentType = () => {
+const CurrentSliders: ComponentType = () => {
   return (
     <Box>
       <Text fontWeight='bold' mb='24px'>
@@ -20,4 +20,4 @@ const SlidersCurrent: ComponentType = () => {
   )
 }
 
-export default SlidersCurrent
+export default CurrentSliders

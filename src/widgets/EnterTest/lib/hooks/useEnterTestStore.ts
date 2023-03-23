@@ -4,11 +4,12 @@ import {
   getNextStage,
   getPrevStage,
   IProgressCategories,
-  Stage
+  EnterTestStage,
+  EnterTestStages
 } from '../../../../entities/Tests'
 
 interface IEnterTestState extends IProgressCategories {
-  stage: Stage
+  stage: EnterTestStage
   isModalOpen: boolean
   isCompleted: boolean
   onOpen: () => void
@@ -30,8 +31,14 @@ const useEnterTestStore = create<IEnterTestState>(set => ({
   creativity: {current: 0, wish: 0},
   onOpen: (): void => set(() => ({isModalOpen: true})),
   onClose: (): void => set(() => ({isModalOpen: false})),
-  onNextStage: (): void => set(({stage}) => ({stage: getNextStage(stage)})),
-  onPrevStage: (): void => set(({stage}) => ({stage: getPrevStage(stage)})),
+  onNextStage: (): void =>
+    set(({stage}) => ({
+      stage: getNextStage(stage, EnterTestStages) as EnterTestStage
+    })),
+  onPrevStage: (): void =>
+    set(({stage}) => ({
+      stage: getPrevStage(stage, EnterTestStages) as EnterTestStage
+    })),
   onSaveCurrent: (data): void => set(() => ({...data})),
   onSaveWish: (data): void => set(() => ({...data})),
   onSaveResults: (): void => set(() => ({isCompleted: true}))

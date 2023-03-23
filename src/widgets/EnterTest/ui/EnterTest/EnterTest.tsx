@@ -10,12 +10,14 @@ import {
 } from '@chakra-ui/react'
 import {ComponentType} from 'react'
 
+import {EnterTestStages} from '../../../../entities/Tests/consts/consts'
+import Stepper from '../../../../entities/Tests/ui/Stepper/Stepper'
 import useEnterTestStore from '../../lib/hooks/useEnterTestStore'
 import Stages from '../Stages'
 import StartTestButton from '../StartTest/StartTest'
 
 const EnterTest: ComponentType = () => {
-  const {isModalOpen, onClose, isCompleted} = useEnterTestStore()
+  const {isModalOpen, onClose, isCompleted, stage} = useEnterTestStore()
 
   const getDescriptionText = (testCompleted: boolean): string => {
     return testCompleted
@@ -27,11 +29,20 @@ const EnterTest: ComponentType = () => {
     <Box>
       <Modal isOpen={isModalOpen} onClose={onClose} isCentered size='xl'>
         <ModalOverlay />
-        <ModalContent w='670px'>
+        <ModalContent bgColor='#F4F9FE'>
           <ModalHeader>Входное тестирование</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <Text>{getDescriptionText(isCompleted)}</Text>
+
+            {stage !== 'info' && (
+              <Box py={8}>
+                <Stepper
+                  activeStep={EnterTestStages.indexOf(stage)}
+                  stepCount={EnterTestStages.length - 1}
+                />
+              </Box>
+            )}
             <Stages />
           </ModalBody>
         </ModalContent>

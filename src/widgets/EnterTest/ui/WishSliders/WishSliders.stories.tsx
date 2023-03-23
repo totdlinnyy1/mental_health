@@ -1,9 +1,9 @@
 import type {Meta, StoryObj} from '@storybook/react'
-import SlidersWish from './SlidersWish'
+import WishSliders from './WishSliders'
 
-const meta: Meta<typeof SlidersWish> = {
-  title: 'widgets/EnterTest/SlidersWish',
-  component: SlidersWish,
+const meta: Meta<typeof WishSliders> = {
+  title: 'widgets/EnterTest/WishSliders',
+  component: WishSliders,
   tags: ['autodocs'],
   args: {
     health: 34,
@@ -20,8 +20,8 @@ const meta: Meta<typeof SlidersWish> = {
 }
 
 export default meta
-type Story = StoryObj<typeof SlidersWish>
+type Story = StoryObj<typeof WishSliders>
 
 export const Primary: Story = {
-  render: args => <SlidersWish {...args} />
+  render: args => <WishSliders {...args} />
 }

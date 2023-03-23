@@ -13,7 +13,7 @@ interface IProps {
   creativity: number
 }
 
-const SlidersWish: ComponentType<IProps> = ({
+const WishSliders: ComponentType<IProps> = ({
   health,
   work,
   relationship,
@@ -36,4 +36,4 @@ const SlidersWish: ComponentType<IProps> = ({
   )
 }
 
-export default SlidersWish
+export default WishSliders

@@ -1,4 +1,6 @@
 export {default as getNextStage} from './lib/helpers/getNextStage'
 export {default as getPrevStage} from './lib/helpers/getPrevStage'
 
-export type {Stage, IProgressCategories} from './types/types'
+export type {EnterTestStage, IProgressCategories} from './types/types'
+export {default as Stepper} from './ui/Stepper/Stepper'
+export {EnterTestStages} from './consts/consts'

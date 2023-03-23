@@ -1,1 +1,1 @@
-export const Stages = ['info', 'current', 'wish', 'result'] as const
+export const EnterTestStages = ['info', 'current', 'wish', 'result'] as const

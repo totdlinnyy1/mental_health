@@ -1,6 +1,6 @@
-import {Stages} from '../consts/consts'
+import {EnterTestStages} from '../consts/consts'
 
-export type Stage = (typeof Stages)[number]
+export type EnterTestStage = (typeof EnterTestStages)[number]
 
 export interface IProgress {
   current: number

@@ -1,7 +1,7 @@
 import {Box} from '@chakra-ui/react'
 import {ComponentType, ReactNode} from 'react'
 
-import {Stage} from '../../../../entities/Tests'
+import {EnterTestStage} from '../../../../entities/Tests'
 import useEnterTestStore from '../../lib/hooks/useEnterTestStore'
 
 import CurrentStage from './CurrentStage/CurrentStage'
@@ -12,7 +12,7 @@ import WishStage from './WishStage/WishStage'
 const Stages: ComponentType = () => {
   const {stage} = useEnterTestStore()
 
-  const showStage = (curStage: Stage): ReactNode => {
+  const showStage = (curStage: EnterTestStage): ReactNode => {
     if (curStage === 'info') {
       return <InfoStage />
     }
