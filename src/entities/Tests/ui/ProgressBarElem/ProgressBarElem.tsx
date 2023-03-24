@@ -3,6 +3,7 @@ import {ComponentType} from 'react'
 import {IconType} from 'react-icons'
 
 import getNumberWithPercent from '../../../../share/lib/helpers/getNumberWithPercent'
+import getProgressBarHeight from '../../lib/helpers/getProgressBarHeight'
 import {IProgress} from '../../types/types'
 
 interface IProps extends IProgress {
@@ -16,11 +17,7 @@ const ProgressBarElem: ComponentType<IProps> = ({wish, current, icon}) => {
         <Box
           pos='absolute'
           w='100%'
-          h={
-            wish > current
-              ? getNumberWithPercent(wish)
-              : getNumberWithPercent(current)
-          }
+          h={getProgressBarHeight(wish, current)}
           bgColor='#1A8DE680'
           bottom='0'
         />
