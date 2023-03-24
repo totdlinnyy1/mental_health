@@ -12,7 +12,7 @@ const Router: ComponentType = () => {
       <Routes>
         <Route path='/' element={<Header />}>
           <Route path='info' element={<StartPage />} />
-          <Route index element={<Dashboard />} />
+          <Route element={<Dashboard />} />
         </Route>
       </Routes>
     </BrowserRouter>
