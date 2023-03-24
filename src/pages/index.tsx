@@ -1,18 +1,19 @@
-import {ComponentType} from 'react'
-import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route
+} from 'react-router-dom'
 
 import Dashboard from './Dashboard/DashBoaed'
 import StartPage from './StartPage/StartPage'
 
-const Router: ComponentType = () => {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/info' element={<StartPage />} />
-        <Route path='/' element={<Dashboard />} />
-      </Routes>
-    </BrowserRouter>
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <>
+      <Route path='/' element={<Dashboard />} />
+      <Route path='/info' element={<StartPage />} />
+    </>
   )
-}
+)
 
-export default Router
+export default router
