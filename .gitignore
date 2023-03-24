@@ -27,3 +27,11 @@ dist-ssr
 .env
 
 yarn.lock
+package-lock.json
+
+# Storybook
+storybook-static
+
+# Vercel
+.vercel
+vercel.json

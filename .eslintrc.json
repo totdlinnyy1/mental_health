@@ -122,7 +122,8 @@
         "selector": "memberLike",
         "format": [
           "camelCase",
-          "snake_case"
+          "snake_case",
+          "PascalCase"
         ],
         "leadingUnderscore": "allow"
       },
@@ -200,6 +201,7 @@
   },
   "ignorePatterns": [
     ".eslintrc.js",
-    "src/**/*.test.ts*"
+    "src/**/*.test.ts*",
+    "src/**/*.stories.ts*"
   ]
 }
