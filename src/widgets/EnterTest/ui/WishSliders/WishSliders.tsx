@@ -4,12 +4,12 @@ import {AiFillHeart} from 'react-icons/ai'
 import {IoMdBriefcase, IoMdColorPalette} from 'react-icons/io'
 import {MdGroup} from 'react-icons/md'
 
-import {IProgressCategories} from '../../../../entities/Tests'
+import {ProgressCategories} from '../../../../entities/Tests'
 import WishSliderElem from '../WishSliderElem/WishSliderElem'
 
 interface IProps {
-  onChange: Dispatch<SetStateAction<IProgressCategories>>
-  data: IProgressCategories
+  onChange: Dispatch<SetStateAction<ProgressCategories>>
+  data: ProgressCategories
 }
 
 const WishSliders: ComponentType<IProps> = ({onChange, data}) => {
