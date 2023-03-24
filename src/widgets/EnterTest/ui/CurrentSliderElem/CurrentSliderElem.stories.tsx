@@ -19,7 +19,9 @@ const meta: Meta<typeof CurrentSliderElem> = {
   tags: ['autodocs'],
   args: {
     icon: IoMdBriefcase,
-    title: 'Работа'
+    title: 'Работа',
+    defaultValue: 0,
+    onChange: value => {}
   },
   argTypes: {
     icon: {

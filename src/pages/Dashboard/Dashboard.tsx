@@ -8,11 +8,13 @@ import useEnterTestStore from '../../widgets/EnterTest/lib/hooks/useEnterTestSto
 const Dashboard: ComponentType = () => {
   const {isCompleted} = useEnterTestStore()
   const navigate = useNavigate()
+
   useEffect(() => {
     if (!isCompleted) {
       navigate('/info')
     }
   }, [isCompleted])
+
   return (
     <Layout>
       <Container />

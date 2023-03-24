@@ -4,7 +4,7 @@ import {
   Route
 } from 'react-router-dom'
 
-import Dashboard from './Dashboard/DashBoaed'
+import Dashboard from './Dashboard/Dashboard'
 import StartPage from './StartPage/StartPage'
 
 const router = createBrowserRouter(
