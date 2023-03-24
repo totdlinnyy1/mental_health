@@ -38,7 +38,11 @@ const EnterTest: ComponentType = () => {
             {stage !== 'info' && (
               <Box py={6}>
                 <Stepper
-                  activeStep={EnterTestStages.indexOf(stage)}
+                  activeStep={
+                    isCompleted
+                      ? EnterTestStages.length - 1
+                      : EnterTestStages.indexOf(stage) - 1
+                  }
                   stepCount={EnterTestStages.length - 1}
                 />
               </Box>

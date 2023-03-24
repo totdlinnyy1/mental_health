@@ -17,7 +17,7 @@ interface IProps {
   title: string
   icon: IconType
   onChange: (value: number) => void
-  defaultValue?: number
+  defaultValue: number
 }
 
 const CurrentSliderElem: ComponentType<IProps> = ({
@@ -26,7 +26,7 @@ const CurrentSliderElem: ComponentType<IProps> = ({
   onChange,
   defaultValue
 }) => {
-  const [sliderValue, setSliderValue] = useState<number>(0)
+  const [sliderValue, setSliderValue] = useState<number>(defaultValue)
 
   const handleChange = (value: number): void => {
     setSliderValue(value)

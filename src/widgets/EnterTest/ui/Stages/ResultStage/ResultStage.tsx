@@ -10,7 +10,7 @@ const ResultStage: ComponentType = () => {
 
   const navigate = useNavigate()
 
-  const handleClick = (): void => navigate('/dashboard')
+  const handleClick = (): void => navigate('/')
 
   return (
     <Box>

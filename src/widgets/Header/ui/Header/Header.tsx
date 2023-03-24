@@ -1,4 +1,5 @@
 import {ComponentType} from 'react'
+import {Outlet} from 'react-router-dom'
 
 import {UserAvatar} from '../../../../entities/User'
 import Layout from '../Layout/Layout'
@@ -7,11 +8,14 @@ import Logo from '../Logo/Logo'
 
 const Header: ComponentType = () => {
   return (
-    <Layout>
-      <Logo />
-      <Links />
-      <UserAvatar size='sm' />
-    </Layout>
+    <>
+      <Layout>
+        <Logo />
+        <Links />
+        <UserAvatar size='sm' />
+      </Layout>
+      <Outlet />
+    </>
   )
 }
 
