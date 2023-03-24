@@ -11,7 +11,7 @@ const Router: ComponentType = () => {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Header />}>
-          <Route path='info' element={<StartPage />} />
+          <Route path='/info' element={<StartPage />} />
           <Route element={<Dashboard />} />
         </Route>
       </Routes>
