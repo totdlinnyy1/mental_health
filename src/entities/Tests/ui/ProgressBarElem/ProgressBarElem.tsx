@@ -23,7 +23,11 @@ const ProgressBarElem: ComponentType<IProps> = ({wish, current, icon}) => {
         <Flex
           alignItems='flex-end'
           w='100%'
-          h={getHeightProgressBar(wish, heightProgressBar)}
+          h={
+            wish > current
+              ? getHeightProgressBar(wish, heightProgressBar)
+              : getHeightProgressBar(current, heightProgressBar)
+          }
           bgColor='#1A8DE680'
         >
           <Box
