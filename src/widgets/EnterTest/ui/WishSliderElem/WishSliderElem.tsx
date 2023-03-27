@@ -61,7 +61,7 @@ const WishSliderElem: ComponentType<IProps> = ({
           <SliderMark value={100} mt={5} ml={-10}>
             100%
           </SliderMark>
-          <SliderMark value={sliderValue} fontWeight='bold' mt={-9} ml={-5}>
+          <SliderMark value={sliderValue} fontWeight='bold' mt={-9} ml={-3}>
             {getNumberWithPercent(sliderValue)}
           </SliderMark>
           <SliderTrack h='8px'>
