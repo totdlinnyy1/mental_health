@@ -1,3 +1,7 @@
+/**
+ * Возвращает следующий этап тестирования
+ * Если следующего этапа нет, то возвращает последний этап
+ */
 const getNextStage = (
   currentStage: string,
   stages: readonly string[]

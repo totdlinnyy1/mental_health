@@ -21,9 +21,11 @@ const EnterTest: ComponentType = () => {
   const {isModalOpen, onClose, isCompleted, stage} = useEnterTestStore()
 
   const getDescriptionText = (testCompleted: boolean): string => {
-    return testCompleted
-      ? 'Готово! Ниже представлена твоя диаграмма ментального здоровья'
-      : 'Чтобы построить диаграмму ментального здоровья, нужно пройти небольшой тест'
+    const resultText =
+      'Готово! Ниже представлена твоя диаграмма ментального здоровья'
+    const waitingText =
+      'Чтобы построить диаграмму ментального здоровья, нужно пройти небольшой тест'
+    return testCompleted ? resultText : waitingText
   }
 
   return (

@@ -7,7 +7,7 @@ import {
   EnterTestStage,
   EnterTestStages,
   ITestsStore
-} from '../../../../entities/Tests'
+} from '@entities/Tests'
 
 interface IEnterTestState extends ITestsStore, ProgressCategories {
   stage: EnterTestStage

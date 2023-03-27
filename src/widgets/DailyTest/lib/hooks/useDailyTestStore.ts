@@ -3,19 +3,15 @@ import {create} from 'zustand'
 import {
   getNextStage,
   getPrevStage,
-  ITestsStore
-} from '../../../../entities/Tests'
-import {
+  ITestsStore,
   DailyTestStages,
-  maxCountOfDailyTasks,
-  minCountOfDailyTasks
-} from '../../../../entities/Tests/consts/consts'
-import {
+  IDailyTestResult,
   Category,
   DailyTestStage,
-  IDailyTestResult
-} from '../../../../entities/Tests/types/types'
-import {IntRange} from '../../../../share'
+  maxCountOfDailyTasks,
+  minCountOfDailyTasks
+} from '@entities/Tests'
+import {IntRange} from '@share/index'
 
 interface IDailyTestState extends ITestsStore, IDailyTestResult {
   stage: DailyTestStage

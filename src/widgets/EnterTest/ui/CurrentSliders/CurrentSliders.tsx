@@ -41,7 +41,7 @@ const CurrentSliders: ComponentType<IProps> = ({onChange, data}) => {
 
   return (
     <Box>
-      <Text fontWeight='bold' mb='24px'>
+      <Text fontWeight='bold' mb='6'>
         Отметь свое текущее состояние на шкалах
       </Text>
 
