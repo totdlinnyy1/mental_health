@@ -1,7 +1,8 @@
 import {Box, Button, ButtonGroup} from '@chakra-ui/react'
 import {ComponentType, useState} from 'react'
 
-import {ProgressCategories} from '../../../../../entities/Tests'
+import {ProgressCategories} from '@entities/Tests/index'
+
 import useEnterTestStore from '../../../lib/hooks/useEnterTestStore'
 import WishSliders from '../../WishSliders/WishSliders'
 

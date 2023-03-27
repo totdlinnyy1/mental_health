@@ -4,7 +4,8 @@ import {AiFillHeart} from 'react-icons/ai'
 import {IoMdBriefcase, IoMdColorPalette} from 'react-icons/io'
 import {MdGroup} from 'react-icons/md'
 
-import {ProgressCategories} from '../../../../entities/Tests'
+import {ProgressCategories} from '@entities/Tests'
+
 import CurrentSliderElem from '../CurrentSliderElem/CurrentSliderElem'
 
 interface IProps {

@@ -11,7 +11,7 @@ import {
 import {ComponentType, useState} from 'react'
 import {IconType} from 'react-icons'
 
-import {getNumberWithPercent} from '../../../../share'
+import {getNumberWithPercent} from '@share/index'
 
 interface IProps {
   title: string

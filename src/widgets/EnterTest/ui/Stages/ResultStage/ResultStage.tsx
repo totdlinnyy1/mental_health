@@ -2,7 +2,8 @@ import {Box, Button, HStack, Text, VStack} from '@chakra-ui/react'
 import {ComponentType} from 'react'
 import {useNavigate} from 'react-router-dom'
 
-import {ProgressBar} from '../../../../../entities/Tests'
+import {ProgressBar} from '@entities/Tests'
+
 import useEnterTestStore from '../../../lib/hooks/useEnterTestStore'
 
 const ResultStage: ComponentType = () => {

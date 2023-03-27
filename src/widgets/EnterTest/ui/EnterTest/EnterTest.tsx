@@ -10,8 +10,9 @@ import {
 } from '@chakra-ui/react'
 import {ComponentType} from 'react'
 
-import {EnterTestStages} from '../../../../entities/Tests/consts/consts'
-import Stepper from '../../../../entities/Tests/ui/Stepper/Stepper'
+import {EnterTestStages} from '@entities/Tests'
+import Stepper from '@entities/Tests/ui/Stepper/Stepper'
+
 import useEnterTestStore from '../../lib/hooks/useEnterTestStore'
 import Stages from '../Stages'
 import StartTestButton from '../StartTest/StartTest'

@@ -1,7 +1,7 @@
 import {Box} from '@chakra-ui/react'
 import {ComponentType, ReactNode} from 'react'
 
-import Header from '../../../../widgets/Header/ui/Header/Header'
+import Header from '@widgets/Header/ui/Header/Header'
 
 interface IProps {
   children: ReactNode
