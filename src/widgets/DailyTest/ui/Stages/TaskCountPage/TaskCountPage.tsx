@@ -1,4 +1,11 @@
-import {Button, Heading, HStack, Text,Radio, RadioGroup} from '@chakra-ui/react'
+import {
+  Button,
+  Heading,
+  HStack,
+  Text,
+  Radio,
+  RadioGroup
+} from '@chakra-ui/react'
 import {ComponentType, useState} from 'react'
 
 import {Stepper} from '../../../../../entities/Tests'

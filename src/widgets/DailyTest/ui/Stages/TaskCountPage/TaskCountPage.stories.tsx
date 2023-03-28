@@ -2,7 +2,7 @@ import type {Meta, StoryObj} from '@storybook/react'
 import TaskCountPage from './TaskCountPage'
 
 const meta: Meta<typeof TaskCountPage> = {
-  title: 'widgets/ScrinTest/TaskCountPage',
+  title: 'widgets/DailyTest/TaskCountPage',
   component: TaskCountPage,
   tags: ['autodocs'],
   args: {
