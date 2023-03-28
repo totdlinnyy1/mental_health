@@ -1,15 +1,16 @@
-import {Box} from '@chakra-ui/react'
+import {Box, Text} from '@chakra-ui/react'
 import {ComponentType, Dispatch, SetStateAction} from 'react'
 import {AiFillHeart} from 'react-icons/ai'
 import {IoMdBriefcase, IoMdColorPalette} from 'react-icons/io'
 import {MdGroup} from 'react-icons/md'
 
-import {IProgressCategories} from '../../../../entities/Tests'
+import {ProgressCategories} from '@entities/Tests'
+
 import WishSliderElem from '../WishSliderElem/WishSliderElem'
 
 interface IProps {
-  onChange: Dispatch<SetStateAction<IProgressCategories>>
-  data: IProgressCategories
+  onChange: Dispatch<SetStateAction<ProgressCategories>>
+  data: ProgressCategories
 }
 
 const WishSliders: ComponentType<IProps> = ({onChange, data}) => {
@@ -43,9 +44,9 @@ const WishSliders: ComponentType<IProps> = ({onChange, data}) => {
 
   return (
     <Box>
-      <Box fontWeight='bold' mb='24px'>
+      <Text fontWeight='bold' mb='6'>
         Отметь на шкалах свой желаемый уровень по каждой сфере
-      </Box>
+      </Text>
       <WishSliderElem
         current={data.health.current}
         icon={AiFillHeart}

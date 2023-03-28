@@ -4,12 +4,13 @@ import {AiFillHeart} from 'react-icons/ai'
 import {IoMdBriefcase, IoMdColorPalette} from 'react-icons/io'
 import {MdGroup} from 'react-icons/md'
 
-import {IProgressCategories} from '../../../../entities/Tests'
+import {ProgressCategories} from '@entities/Tests'
+
 import CurrentSliderElem from '../CurrentSliderElem/CurrentSliderElem'
 
 interface IProps {
-  onChange: Dispatch<SetStateAction<IProgressCategories>>
-  data: IProgressCategories
+  onChange: Dispatch<SetStateAction<ProgressCategories>>
+  data: ProgressCategories
 }
 
 const CurrentSliders: ComponentType<IProps> = ({onChange, data}) => {
@@ -40,7 +41,7 @@ const CurrentSliders: ComponentType<IProps> = ({onChange, data}) => {
 
   return (
     <Box>
-      <Text fontWeight='bold' mb='24px'>
+      <Text fontWeight='bold' mb='6'>
         Отметь свое текущее состояние на шкалах
       </Text>
 

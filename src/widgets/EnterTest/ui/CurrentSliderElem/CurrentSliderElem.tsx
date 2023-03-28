@@ -4,14 +4,14 @@ import {
   SliderFilledTrack,
   SliderThumb,
   SliderMark,
-  Box,
   Icon,
-  HStack
+  HStack,
+  Text
 } from '@chakra-ui/react'
 import {ComponentType, useState} from 'react'
 import {IconType} from 'react-icons'
 
-import {getNumberWithPercent} from '../../../../share'
+import {getNumberWithPercent} from '@share/index'
 
 interface IProps {
   title: string
@@ -34,26 +34,26 @@ const CurrentSliderElem: ComponentType<IProps> = ({
   }
 
   return (
-    <HStack py={6} spacing={10}>
-      <HStack spacing={2.5} w='180px'>
-        <Icon w='20px' as={icon} />
-        <Box>{title}</Box>
+    <HStack py='6' spacing='10'>
+      <HStack spacing='2.5' w='180px'>
+        <Icon boxSize='5' as={icon} />
+        <Text>{title}</Text>
       </HStack>
       <Slider
         defaultValue={defaultValue}
         onChange={handleChange}
         focusThumbOnChange={false}
       >
-        <SliderMark value={0} mt={5}>
+        <SliderMark value={0} mt='5' ml='-1'>
           0%
         </SliderMark>
-        <SliderMark value={100} mt={5} ml={-10}>
+        <SliderMark value={100} mt='5' ml='-10'>
           100%
         </SliderMark>
-        <SliderMark value={sliderValue} fontWeight='bold' mt={-9} ml={-5}>
+        <SliderMark value={sliderValue} fontWeight='bold' mt='-9' ml='-5'>
           {sliderValue !== 0 && getNumberWithPercent(sliderValue)}
         </SliderMark>
-        <SliderTrack h='8px' borderRadius='base'>
+        <SliderTrack h='2' borderRadius='base'>
           <SliderFilledTrack />
         </SliderTrack>
         <SliderThumb bgColor='blue.500' />

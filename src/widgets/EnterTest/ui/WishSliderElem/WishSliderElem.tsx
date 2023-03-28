@@ -1,17 +1,18 @@
 import {
-  Box,
   HStack,
   Icon,
   Slider,
   SliderFilledTrack,
   SliderMark,
   SliderThumb,
-  SliderTrack
+  SliderTrack,
+  Text
 } from '@chakra-ui/react'
 import {ComponentType, useState} from 'react'
 import {IconType} from 'react-icons'
 
-import {getNumberWithPercent} from '../../../../share'
+import {getNumberWithPercent} from '@share/index'
+
 import getWidthForSlider from '../../lib/helpers/getWidhtSlider'
 
 interface IProps {
@@ -35,15 +36,15 @@ const WishSliderElem: ComponentType<IProps> = ({
   }
 
   return (
-    <HStack py={6} spacing={10}>
-      <HStack spacing={2.5} w='180px'>
-        <Icon w='20px' as={icon} />
-        <Box>{title}</Box>
+    <HStack py='6' spacing='10'>
+      <HStack spacing='2.5' w='180px'>
+        <Icon boxSize='5' as={icon} />
+        <Text>{title}</Text>
       </HStack>
       <HStack
         justifyContent='end'
         w='100%'
-        h='8px'
+        h='2'
         bgColor='blue.500'
         borderRadius='base'
       >
@@ -55,16 +56,16 @@ const WishSliderElem: ComponentType<IProps> = ({
           colorScheme='cyan'
           defaultValue={current}
         >
-          <SliderMark value={0} mt={5}>
+          <SliderMark value={0} mt='5' ml='-1'>
             0%
           </SliderMark>
-          <SliderMark value={100} mt={5} ml={-10}>
+          <SliderMark value={100} mt='5' ml='-10'>
             100%
           </SliderMark>
-          <SliderMark value={sliderValue} fontWeight='bold' mt={-9} ml={-5}>
+          <SliderMark value={sliderValue} fontWeight='bold' mt='-9' ml='-3'>
             {getNumberWithPercent(sliderValue)}
           </SliderMark>
-          <SliderTrack h='8px'>
+          <SliderTrack h='2'>
             <SliderFilledTrack />
           </SliderTrack>
           <SliderThumb bgColor='blue.500' />

@@ -20,7 +20,8 @@ const meta: Meta<typeof WishSliderElem> = {
   args: {
     icon: IoMdBriefcase,
     title: 'Работа',
-    current: 45
+    current: 45,
+    onChange: value => {}
   },
   argTypes: {
     icon: {

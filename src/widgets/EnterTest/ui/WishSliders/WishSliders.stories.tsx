@@ -11,7 +11,8 @@ const meta: Meta<typeof WishSliders> = {
       relationship: {current: 23, wish: 57},
       work: {current: 24, wish: 70},
       creativity: {current: 24, wish: 90}
-    }
+    },
+    onChange: value => {}
   }
 }
 
