@@ -15,23 +15,14 @@ const ProgressBarElem: ComponentType<IProps> = props => {
 
   return (
     <Flex direction='column' justify='space-between' gap='10px'>
-      <Flex
-        w='18px'
-        h='113px'
-        bgColor='#1A8DE640'
-        alignItems='flex-end'
-      >
+      <Flex w='18px' h='113px' bgColor='#1A8DE640' alignItems='flex-end'>
         <Flex
           alignItems='flex-end'
           w='100%'
           h={getHeightProgressBar(wish, current)}
           bgColor='#1A8DE680'
         >
-          <Box
-            w='100%'
-            h={getNumberWithPercent(wish)}
-            bgColor='#1A8DE6BF'
-          />
+          <Box w='100%' h={getNumberWithPercent(wish)} bgColor='#1A8DE6BF' />
         </Flex>
       </Flex>
       <Center w='18px' h='18px'>
