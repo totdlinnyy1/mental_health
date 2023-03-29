@@ -1,8 +1,8 @@
 import {Box} from '@chakra-ui/react'
 import {ComponentType, ReactNode} from 'react'
 
-import {EnterTestStage} from '../../../../entities/Tests'
-import useEnterTestStore from '../../lib/hooks/useEnterTestStore'
+import {EnterTestStage} from '@entities/Tests'
+import useEnterTestStore from '@widgets/EnterTest/lib/hooks/useEnterTestStore'
 
 import CurrentStage from './CurrentStage/CurrentStage'
 import InfoStage from './InfoStage/InfoStage'

@@ -5,6 +5,7 @@ import {IoMdBriefcase, IoMdColorPalette} from 'react-icons/io'
 import {MdGroup} from 'react-icons/md'
 
 import {ProgressCategories} from '@entities/Tests'
+import useSliderResult from '@widgets/EnterTest/lib/hooks/useSlidersResult'
 
 import WishSliderElem from '../WishSliderElem/WishSliderElem'
 
@@ -14,33 +15,16 @@ interface IProps {
 }
 
 const WishSliders: ComponentType<IProps> = ({onChange, data}) => {
-  const onChangeHealth = (value: number): void => {
-    onChange(prevState => ({
-      ...prevState,
-      health: {current: data.health.current, wish: value}
-    }))
-  }
-
-  const onChangeRelationship = (value: number): void => {
-    onChange(prevState => ({
-      ...prevState,
-      relationship: {current: data.relationship.current, wish: value}
-    }))
-  }
-
-  const onChangeWork = (value: number): void => {
-    onChange(prevState => ({
-      ...prevState,
-      work: {current: data.work.current, wish: value}
-    }))
-  }
-
-  const onChangeCreativity = (value: number): void => {
-    onChange(prevState => ({
-      ...prevState,
-      creativity: {current: data.creativity.current, wish: value}
-    }))
-  }
+  const {
+    onChangeHealth,
+    onChangeRelationship,
+    onChangeCreativity,
+    onChangeWork
+  } = useSliderResult({
+    onChange,
+    data,
+    isHaveCurrent: true
+  })
 
   return (
     <Box>

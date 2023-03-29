@@ -20,7 +20,7 @@ const DailyTest: ComponentType = () => {
         <ModalContent bgColor='#F4F9FE'>
           <ModalHeader>Ежедневное тестирование</ModalHeader>
           <ModalCloseButton />
-          <ModalBody></ModalBody>
+          <ModalBody />
         </ModalContent>
       </Modal>
     </Box>
