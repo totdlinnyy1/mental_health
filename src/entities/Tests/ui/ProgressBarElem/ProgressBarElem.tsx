@@ -2,13 +2,13 @@ import {Box, Flex, Center, Icon} from '@chakra-ui/react'
 import {ComponentType} from 'react'
 import {IconType} from 'react-icons'
 
+import getHeightProgressBar from '@entities/Tests/lib/helpers/getHeightProgressBar'
 import {IProgress} from '@entities/Tests/types/types'
-import getNumberWithPercent from '@share/lib/helpers/getNumberWithPercent'
+import {getNumberWithPercent} from '@share/index'
 
 interface IProps extends IProgress {
   icon: IconType
 }
-
 
 const ProgressBarElem: ComponentType<IProps> = props => {
   const {icon, wish, current} = props
@@ -17,23 +17,19 @@ const ProgressBarElem: ComponentType<IProps> = props => {
     <Flex direction='column' justify='space-between' gap='10px'>
       <Flex
         w='18px'
-        h={`${heightProgressBar}px`}
+        h='113px'
         bgColor='#1A8DE640'
         alignItems='flex-end'
       >
         <Flex
           alignItems='flex-end'
           w='100%'
-          h={
-            wish > current
-              ? getHeightProgressBar(wish, heightProgressBar)
-              : getHeightProgressBar(current, heightProgressBar)
-          }
+          h={getHeightProgressBar(wish, current)}
           bgColor='#1A8DE680'
         >
           <Box
             w='100%'
-            h={getHeightProgressBar(current, heightProgressBar)}
+            h={getNumberWithPercent(wish)}
             bgColor='#1A8DE6BF'
           />
         </Flex>
