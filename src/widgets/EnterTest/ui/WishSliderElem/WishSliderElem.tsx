@@ -12,8 +12,7 @@ import {ComponentType, useState} from 'react'
 import {IconType} from 'react-icons'
 
 import {getNumberWithPercent} from '@share/index'
-
-import getWidthForSlider from '../../lib/helpers/getWidhtSlider'
+import getWidthForSlider from '@widgets/EnterTest/lib/helpers/getWidhtSlider'
 
 interface IProps {
   title: string

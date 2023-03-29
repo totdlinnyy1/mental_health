@@ -9,7 +9,7 @@ import {
 } from '@chakra-ui/react'
 import {ComponentType} from 'react'
 
-import useDailyTestStore from '../../lib/hooks/useDailyTestStore'
+import useDailyTestStore from '@widgets/DailyTest/lib/hooks/useDailyTestStore'
 
 const DailyTest: ComponentType = () => {
   const {isModalOpen, onClose} = useDailyTestStore()

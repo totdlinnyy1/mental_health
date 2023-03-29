@@ -12,8 +12,8 @@ import {ComponentType} from 'react'
 
 import {EnterTestStages} from '@entities/Tests'
 import Stepper from '@entities/Tests/ui/Stepper/Stepper'
+import useEnterTestStore from '@widgets/EnterTest/lib/hooks/useEnterTestStore'
 
-import useEnterTestStore from '../../lib/hooks/useEnterTestStore'
 import Stages from '../Stages'
 import StartTestButton from '../StartTest/StartTest'
 

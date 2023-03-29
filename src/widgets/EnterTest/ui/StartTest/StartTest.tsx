@@ -1,7 +1,7 @@
 import {Box, Button, Heading, Text} from '@chakra-ui/react'
 import {ComponentType} from 'react'
 
-import useEnterTestStore from '../../lib/hooks/useEnterTestStore'
+import useEnterTestStore from '@widgets/EnterTest/lib/hooks/useEnterTestStore'
 
 const StartTestButton: ComponentType = () => {
   const {onOpen} = useEnterTestStore()

@@ -2,9 +2,8 @@ import {Box, Button, ButtonGroup} from '@chakra-ui/react'
 import {ComponentType, useState} from 'react'
 
 import {ProgressCategories} from '@entities/Tests/index'
-
-import useEnterTestStore from '../../../lib/hooks/useEnterTestStore'
-import WishSliders from '../../WishSliders/WishSliders'
+import useEnterTestStore from '@widgets/EnterTest/lib/hooks/useEnterTestStore'
+import WishSliders from '@widgets/EnterTest/ui/WishSliders/WishSliders'
 
 const WishStage: ComponentType = () => {
   const store = useEnterTestStore()

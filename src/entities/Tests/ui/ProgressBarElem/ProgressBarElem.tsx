@@ -2,9 +2,9 @@ import {Box, Flex, Center, Icon} from '@chakra-ui/react'
 import {ComponentType} from 'react'
 import {IconType} from 'react-icons'
 
+import {IProgress} from '@entities/Tests/types/types'
 import getNumberWithPercent from '@share/lib/helpers/getNumberWithPercent'
 
-import {IProgress} from '../../types/types'
 
 interface IProps extends IProgress {
   icon: IconType

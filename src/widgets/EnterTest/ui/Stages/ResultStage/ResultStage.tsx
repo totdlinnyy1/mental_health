@@ -3,8 +3,7 @@ import {ComponentType} from 'react'
 import {useNavigate} from 'react-router-dom'
 
 import {ProgressBar} from '@entities/Tests'
-
-import useEnterTestStore from '../../../lib/hooks/useEnterTestStore'
+import useEnterTestStore from '@widgets/EnterTest/lib/hooks/useEnterTestStore'
 
 const ResultStage: ComponentType = () => {
   const store = useEnterTestStore()
