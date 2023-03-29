@@ -1,15 +1,15 @@
 import {VStack, Heading, Text} from '@chakra-ui/react'
 import {ComponentType} from 'react'
 
-const PercentСompatibility: ComponentType = () => {
+const PercentCompatibility: ComponentType = () => {
   return (
-    <VStack fontSize='14px' fontWeight='500'>
+    <VStack justifyContent='center'>
       <Heading>87%</Heading>
-      <Text>
+      <Text fontSize='sm' textAlign='center'>
         Не все потеряно, вы скорее могли бы быть товарищами нежели чем друзьями
       </Text>
     </VStack>
   )
 }
 
-export default PercentСompatibility
+export default PercentCompatibility

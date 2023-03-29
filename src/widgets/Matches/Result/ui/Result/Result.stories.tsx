@@ -2,7 +2,7 @@ import type {Meta, StoryObj} from '@storybook/react'
 import Result from './Result'
 
 const meta: Meta<typeof Result> = {
-  title: 'widgets/Result/Result',
+  title: 'widgets/Matches/Result',
   component: Result,
   tags: ['autodocs']
 }

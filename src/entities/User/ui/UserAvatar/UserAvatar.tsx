@@ -2,7 +2,7 @@ import {Avatar} from '@chakra-ui/react'
 import {ComponentType} from 'react'
 
 interface IProps {
-  size?: 'sm' | 'md' | '2xl'
+  size?: 'sm' | 'md' | 'xl' | '2xl'
 }
 const UserAvatar: ComponentType<IProps> = ({size}) => {
   const user = {
