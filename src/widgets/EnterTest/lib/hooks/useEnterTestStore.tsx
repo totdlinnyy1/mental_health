@@ -3,21 +3,15 @@ import {create} from 'zustand'
 import {
   getNextStage,
   getPrevStage,
-  IProgressCategories,
+  ProgressCategories,
   EnterTestStage,
-  EnterTestStages
-} from '../../../../entities/Tests'
+  EnterTestStages,
+  ITestsStore
+} from '@entities/Tests'
 
-interface IEnterTestState extends IProgressCategories {
+interface IEnterTestState extends ITestsStore, ProgressCategories {
   stage: EnterTestStage
-  isModalOpen: boolean
-  isCompleted: boolean
-  onOpen: () => void
-  onClose: () => void
-  onNextStage: () => void
-  onPrevStage: () => void
-  onCompleted: () => void
-  onSaveResults: (data: IProgressCategories) => void
+  onSaveResults: (data: ProgressCategories) => void
 }
 
 const useEnterTestStore = create<IEnterTestState>(set => ({

@@ -1,6 +1,7 @@
 import {ComponentType} from 'react'
 
-import {UserAvatar} from '../../../../entities/User'
+import {UserAvatar} from '@entities/User'
+
 import Layout from '../Layout/Layout'
 import Links from '../Links/Links'
 import Logo from '../Logo/Logo'

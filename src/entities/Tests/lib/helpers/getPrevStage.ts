@@ -1,3 +1,4 @@
+// Возвращает предыдущий этап тестирования
 const getNextStage = (
   currentStage: string,
   stages: readonly string[]
