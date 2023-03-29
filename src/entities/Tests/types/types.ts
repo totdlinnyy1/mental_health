@@ -1,15 +1,37 @@
-import {EnterTestStages} from '../consts/consts'
+import {IntRange} from '../../../share'
+import {
+  Categories,
+  EnterTestStages,
+  minCountOfDailyTasks,
+  maxCountOfDailyTasks,
+  DailyTestStages
+} from '../consts/consts'
 
 export type EnterTestStage = (typeof EnterTestStages)[number]
+export type DailyTestStage = (typeof DailyTestStages)[number]
+
+export type Category = (typeof Categories)[number]
 
 export interface IProgress {
   current: number
   wish: number
 }
 
-export interface IProgressCategories {
-  health: IProgress
-  relationship: IProgress
-  work: IProgress
-  creativity: IProgress
+export type ProgressCategories = {
+  [category in (typeof Categories)[number]]: IProgress
+}
+
+export interface IDailyTestResult {
+  category?: Category
+  taskCount?: IntRange<typeof minCountOfDailyTasks, typeof maxCountOfDailyTasks>
+}
+
+export interface ITestsStore {
+  isModalOpen: boolean
+  isCompleted: boolean
+  onOpen: () => void
+  onClose: () => void
+  onNextStage: () => void
+  onPrevStage: () => void
+  onCompleted: () => void
 }

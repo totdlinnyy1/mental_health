@@ -4,15 +4,16 @@ import {AiFillHeart} from 'react-icons/ai'
 import {IoMdBriefcase, IoMdColorPalette} from 'react-icons/io'
 import {MdGroup} from 'react-icons/md'
 
-import {IProgressCategories} from '../../types/types'
+import {ProgressCategories} from '@entities/Tests/types/types'
+
 import ProgressBarElem from '../ProgressBarElem/ProgressBarElem'
 
 interface IProps {
-  data?: IProgressCategories
+  data?: ProgressCategories
 }
 
 const ProgressBar: ComponentType<IProps> = ({data}) => {
-  const [progressData, setProgressData] = useState<IProgressCategories>({
+  const [progressData, setProgressData] = useState<ProgressCategories>({
     work: {wish: 90, current: 15},
     relationship: {wish: 80, current: 57},
     health: {wish: 70, current: 65},

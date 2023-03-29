@@ -10,20 +10,22 @@ import {
 } from '@chakra-ui/react'
 import {ComponentType} from 'react'
 
-import {EnterTestStages} from '../../../../entities/Tests/consts/consts'
-import Stepper from '../../../../entities/Tests/ui/Stepper/Stepper'
-import useEnterTestStore from '../../lib/hooks/useEnterTestStore'
+import {EnterTestStages} from '@entities/Tests'
+import Stepper from '@entities/Tests/ui/Stepper/Stepper'
+import {
+  enterTestResultText,
+  enterTestWaitingResultText
+} from '@widgets/EnterTest/consts/index'
+import useEnterTestStore from '@widgets/EnterTest/lib/hooks/useEnterTestStore'
+
 import Stages from '../Stages'
 import StartTestButton from '../StartTest/StartTest'
 
 const EnterTest: ComponentType = () => {
   const {isModalOpen, onClose, isCompleted, stage} = useEnterTestStore()
 
-  const getDescriptionText = (testCompleted: boolean): string => {
-    return testCompleted
-      ? 'Готово! Ниже представлена твоя диаграмма ментального здоровья'
-      : 'Чтобы построить диаграмму ментального здоровья, нужно пройти небольшой тест'
-  }
+  const getDescriptionText = (testCompleted: boolean): string =>
+    testCompleted ? enterTestResultText : enterTestWaitingResultText
 
   return (
     <Box>

@@ -1,1 +1,1 @@
-export {default as StartEnterTestButton} from './ui/StartTest/StartTest'
+export {default as EnterTest} from './ui/EnterTest/EnterTest'

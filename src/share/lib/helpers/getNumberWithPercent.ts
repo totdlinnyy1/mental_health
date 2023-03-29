@@ -1,4 +1,8 @@
-// concatenate number of percent with percent symbol
+/**
+ * Возвращает число со знаком процента
+ * Если числа нет, то возвращает 0%
+ * Если число выходит за границы [0-100], то возвращает граничное значение
+ */
 const getNumberWithPercent = (percent: number): string => {
   const minPercent = 0
   const maxPercent = 100
