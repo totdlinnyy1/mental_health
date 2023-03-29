@@ -5,7 +5,6 @@ import {IconType} from 'react-icons'
 import {IProgress} from '@entities/Tests/types/types'
 import getNumberWithPercent from '@share/lib/helpers/getNumberWithPercent'
 
-
 interface IProps extends IProgress {
   icon: IconType
 }
