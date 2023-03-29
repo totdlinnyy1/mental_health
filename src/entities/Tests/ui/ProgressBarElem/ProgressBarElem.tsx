@@ -9,30 +9,34 @@ interface IProps extends IProgress {
   icon: IconType
 }
 
+
 const ProgressBarElem: ComponentType<IProps> = props => {
   const {icon, wish, current} = props
 
   return (
     <Flex direction='column' justify='space-between' gap='10px'>
-      <Flex pos='relative' w='18px' h='113px' bgColor='#1A8DE640'>
-        <Box
-          pos='absolute'
+      <Flex
+        w='18px'
+        h={`${heightProgressBar}px`}
+        bgColor='#1A8DE640'
+        alignItems='flex-end'
+      >
+        <Flex
+          alignItems='flex-end'
           w='100%'
           h={
             wish > current
-              ? getNumberWithPercent(wish)
-              : getNumberWithPercent(current)
+              ? getHeightProgressBar(wish, heightProgressBar)
+              : getHeightProgressBar(current, heightProgressBar)
           }
           bgColor='#1A8DE680'
-          bottom='0'
-        />
-        <Box
-          pos='absolute'
-          w='100%'
-          h={getNumberWithPercent(current)}
-          bgColor='#1A8DE6BF'
-          bottom='0'
-        />
+        >
+          <Box
+            w='100%'
+            h={getHeightProgressBar(current, heightProgressBar)}
+            bgColor='#1A8DE6BF'
+          />
+        </Flex>
       </Flex>
       <Center w='18px' h='18px'>
         <Icon as={icon} />
