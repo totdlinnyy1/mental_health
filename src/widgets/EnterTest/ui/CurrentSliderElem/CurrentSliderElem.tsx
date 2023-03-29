@@ -20,12 +20,9 @@ interface IProps {
   defaultValue: number
 }
 
-const CurrentSliderElem: ComponentType<IProps> = ({
-  icon,
-  title,
-  onChange,
-  defaultValue
-}) => {
+const CurrentSliderElem: ComponentType<IProps> = props => {
+  const {title, onChange, defaultValue, icon} = props
+
   const [sliderValue, setSliderValue] = useState<number>(defaultValue)
 
   const handleChange = (value: number): void => {

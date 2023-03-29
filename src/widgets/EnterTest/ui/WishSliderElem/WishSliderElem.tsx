@@ -21,12 +21,9 @@ interface IProps {
   onChange: (value: number) => void
 }
 
-const WishSliderElem: ComponentType<IProps> = ({
-  icon,
-  title,
-  current,
-  onChange
-}) => {
+const WishSliderElem: ComponentType<IProps> = props => {
+  const {title, current, onChange, icon} = props
+
   const [sliderValue, setSliderValue] = useState<number>(current)
 
   const handleChange = (value: number): void => {

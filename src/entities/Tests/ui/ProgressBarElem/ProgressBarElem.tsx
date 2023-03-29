@@ -9,7 +9,9 @@ interface IProps extends IProgress {
   icon: IconType
 }
 
-const ProgressBarElem: ComponentType<IProps> = ({wish, current, icon}) => {
+const ProgressBarElem: ComponentType<IProps> = props => {
+  const {icon, wish, current} = props
+
   return (
     <Flex direction='column' justify='space-between' gap='10px'>
       <Flex pos='relative' w='18px' h='113px' bgColor='#1A8DE640'>
