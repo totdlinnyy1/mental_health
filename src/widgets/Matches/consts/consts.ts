@@ -16,8 +16,7 @@ export const HobbyQuestions = <const>[
   {value: 'Считаешь ли ты себя книголюбом?', label: 'book'},
   {value: 'Ты получаешь удовольствие от приготовления еды?', label: 'food'},
   {value: 'Увлекался ли ты изучением иностранных языков?', label: 'language'},
-  {value: 'Собирал ли ты коллекции чего-либо?', label: 'collections'},
-  {value: 'Занимался ли ты рисованием?', label: 'draw'}
+  {value: 'Собирал ли ты коллекции чего-либо?', label: 'collections'}
 ]
 
 export const HobbyQuestionsLabel = <const>[
@@ -30,6 +29,5 @@ export const HobbyQuestionsLabel = <const>[
   'book',
   'food',
   'language',
-  'collections',
-  'draw'
+  'collections'
 ]

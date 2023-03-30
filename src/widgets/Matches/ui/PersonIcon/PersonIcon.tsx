@@ -1,4 +1,4 @@
-import {VStack, Text} from '@chakra-ui/react'
+import {Text, VStack} from '@chakra-ui/react'
 import {ComponentType} from 'react'
 
 import {UserAvatar} from '@src/entities/User'

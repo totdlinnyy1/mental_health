@@ -5,7 +5,7 @@ import {HobbyAnswers, MatchModalContent} from '@widgets/Matches/types/types'
 
 interface IMatchState extends ITestsStore {
   testResult?: HobbyAnswers
-  result?: {
+  matchResult?: {
     match: number
     resume: string
     recommendations: string[]
@@ -22,7 +22,8 @@ const useMatchesStore = create<IMatchState>(set => ({
   isCompleted: false,
   onOpen: (): void => set(() => ({isModalOpen: true})),
   onClose: (): void => set(() => ({isModalOpen: false})),
-  onCompleted: (data: HobbyAnswers): void => set(() => ({testResult: data})),
+  onCompleted: (data: HobbyAnswers): void =>
+    set(() => ({testResult: data, isCompleted: true})),
   changeModalContent: (modalContent): void => set(() => ({modalContent}))
 }))
 

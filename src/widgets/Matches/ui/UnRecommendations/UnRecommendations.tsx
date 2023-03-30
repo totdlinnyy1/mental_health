@@ -1,4 +1,4 @@
-import {VStack, Box, Text} from '@chakra-ui/react'
+import {Box, Text, VStack} from '@chakra-ui/react'
 import {ComponentType} from 'react'
 
 const UnRecommendations: ComponentType = () => {
