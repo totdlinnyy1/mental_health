@@ -7,7 +7,9 @@ const meta: Meta<typeof UserAvatar> = {
   component: UserAvatar,
   tags: ['autodocs'],
   args: {
-    size: 'md'
+    size: 'md',
+    name: 'Феофан Игоревич',
+    avatar: ''
   },
   argTypes: {
     size: {control: 'radio', options: ['sm', 'md', '2xl']}

@@ -1,11 +1,20 @@
-import {Box, Button, Heading, HStack, ModalFooter, Radio, RadioGroup, Text, VStack} from '@chakra-ui/react'
+import {
+  Box,
+  Button,
+  Heading,
+  HStack,
+  ModalFooter,
+  Radio,
+  RadioGroup,
+  Text,
+  VStack
+} from '@chakra-ui/react'
 import {ComponentType, ReactElement} from 'react'
 import {Controller, useForm} from 'react-hook-form'
 
 import {HobbyQuestions} from '@widgets/Matches/consts/consts'
 import useMatchesStore from '@widgets/Matches/lib/hooks/useMatchesStore'
 import {HobbyAnswers} from '@widgets/Matches/types/types'
-
 
 const Hobby: ComponentType = () => {
   const {onCompleted, onClose} = useMatchesStore()
