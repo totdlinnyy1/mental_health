@@ -1,10 +1,10 @@
 import {IntRange} from '../../../share'
 import {
   Categories,
+  DailyTestStages,
   EnterTestStages,
-  minCountOfDailyTasks,
   maxCountOfDailyTasks,
-  DailyTestStages
+  minCountOfDailyTasks
 } from '../consts/consts'
 
 export type EnterTestStage = (typeof EnterTestStages)[number]
@@ -26,12 +26,14 @@ export interface IDailyTestResult {
   taskCount?: IntRange<typeof minCountOfDailyTasks, typeof maxCountOfDailyTasks>
 }
 
+export interface ITestStagesControl {
+  onNextStage: () => void
+  onPrevStage: () => void
+}
+
 export interface ITestsStore {
   isModalOpen: boolean
   isCompleted: boolean
   onOpen: () => void
   onClose: () => void
-  onNextStage: () => void
-  onPrevStage: () => void
-  onCompleted: () => void
 }

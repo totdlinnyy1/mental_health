@@ -1,12 +1,15 @@
-// in order to find out what the length of the strip will be, we need to know the %
-// of filling and the length of the parent
+/**
+ * Для того чтобы узнать, какой высоты будет progressBar, нам нужно знать % заполнения
+ * и длину ГЛАВНОГО родителя
+ */
 
 const getHeightProgressBar = (
   childHeightPercent: number,
   number: number
 ): string => {
-  const maxHeight = 100
-  const childHeight = (childHeightPercent / maxHeight) * number
+  const percent = 100
+  const childHeight = (childHeightPercent / percent) * number
+
   return childHeight + 'px'
 }
 

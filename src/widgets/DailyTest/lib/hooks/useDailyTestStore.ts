@@ -11,7 +11,7 @@ import {
   maxCountOfDailyTasks,
   minCountOfDailyTasks
 } from '@entities/Tests'
-import {IntRange} from '@share/index'
+import {IntRange} from '@src/share'
 
 interface IDailyTestState extends ITestsStore, IDailyTestResult {
   stage: DailyTestStage
@@ -22,6 +22,7 @@ interface IDailyTestState extends ITestsStore, IDailyTestResult {
       typeof maxCountOfDailyTasks
     >
   ) => void
+  onCompleted: () => void
 }
 
 const useDailyTestStore = create<IDailyTestState>(set => ({

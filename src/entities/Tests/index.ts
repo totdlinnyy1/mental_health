@@ -7,7 +7,8 @@ export type {
   ITestsStore,
   IDailyTestResult,
   Category,
-  DailyTestStage
+  DailyTestStage,
+  ITestStagesControl
 } from './types/types'
 export {default as Stepper} from './ui/Stepper/Stepper'
 export {

@@ -2,14 +2,14 @@ import {Avatar} from '@chakra-ui/react'
 import {ComponentType} from 'react'
 
 interface IProps {
-  size?: 'sm' | 'md' | '2xl'
+  name: string
+  avatar?: string
+  size?: 'sm' | 'md' | 'xl' | '2xl'
 }
-const UserAvatar: ComponentType<IProps> = ({size}) => {
-  const user = {
-    name: 'Dan Abrahmov',
-    src: 'https://bit.ly/sage-adebayo'
-  }
-  return <Avatar size={size} name={user.name} src={user.src} />
+const UserAvatar: ComponentType<IProps> = props => {
+  const {size, avatar, name} = props
+
+  return <Avatar size={size} name={name} src={avatar} />
 }
 
 export default UserAvatar

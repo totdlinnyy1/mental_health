@@ -6,12 +6,17 @@ import {
   ProgressCategories,
   EnterTestStage,
   EnterTestStages,
-  ITestsStore
+  ITestsStore,
+  ITestStagesControl
 } from '@entities/Tests'
 
-interface IEnterTestState extends ITestsStore, ProgressCategories {
+interface IEnterTestState
+  extends ITestsStore,
+    ITestStagesControl,
+    ProgressCategories {
   stage: EnterTestStage
   onSaveResults: (data: ProgressCategories) => void
+  onCompleted: () => void
 }
 
 const useEnterTestStore = create<IEnterTestState>(set => ({
