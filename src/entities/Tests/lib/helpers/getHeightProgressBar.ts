@@ -7,7 +7,6 @@ const getHeightProgressBar = (
   childHeightPercent: number,
   number: number
 ): string => {
-
   const percent = 100
   const childHeight = (childHeightPercent / percent) * number
 
