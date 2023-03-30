@@ -6,10 +6,7 @@ const meta: Meta<typeof MatchQr> = {
   component: MatchQr,
   tags: ['autodocs'],
   args: {
-    link: 'https://kartinkin.net/pics/uploads/posts/2022-09/1663154690_49-kartinkin-net-p-kot-s-pechalnimi-glazami-krasivo-55.jpg'
-  },
-  argTypes: {
-    link: {description: 'What link in qr-code'}
+    userId: 2
   }
 }
 export default meta
