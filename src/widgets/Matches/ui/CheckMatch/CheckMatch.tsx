@@ -1,7 +1,7 @@
 import {HStack} from '@chakra-ui/react'
 import {ComponentType} from 'react'
 
-import MatchQr from '@widgets/Matches/ui/MachQr/MatchQr'
+import MatchQr from '@widgets/Matches/ui/MacthQr/MatchQr'
 import MatchSearch from '@widgets/Matches/ui/MatchSearch/MatchSearch'
 
 const CheckMatch: ComponentType = () => {
