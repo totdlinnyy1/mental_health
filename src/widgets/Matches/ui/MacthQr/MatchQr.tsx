@@ -8,10 +8,10 @@ interface IProps {
 
 const MatchQr: ComponentType<IProps> = ({link}) => {
   return (
-    <Box>
-      <QRCodeSVG size={146} value={link} />
-      <Button w='100%' variant='outline' mt='4'>
-        Скопировать
+    <Box w='max-content'>
+      <QRCodeSVG size={160} value={link} />
+      <Button w='100%' variant='outline' mt='4' fontSize='xs'>
+        Скопировать ссылку
       </Button>
     </Box>
   )

@@ -4,7 +4,8 @@ import {
   FormControl,
   Heading,
   HStack,
-  Input
+  Input,
+  Text
 } from '@chakra-ui/react'
 import {ComponentType} from 'react'
 import {Form} from 'react-router-dom'
@@ -16,13 +17,23 @@ const MatchSearch: ComponentType = () => {
       <Form>
         <HStack>
           <FormControl>
-            <Input placeholder='Cсылка' minW='md' colorScheme='blue' />
+            <Input
+              placeholder='Cсылка вашего друга'
+              minW='md'
+              colorScheme='blue'
+            />
           </FormControl>
           <Button variant='outline' colorScheme='blue'>
             Проверить
           </Button>
         </HStack>
       </Form>
+      <Box py='4'>
+        <Text fontSize='xl'>
+          Для каждого мэтча вы получите рекомендации, что вам с другом нужно
+          сделать, чтобы не потерять дружбу или стать еще ближе!
+        </Text>
+      </Box>
     </Box>
   )
 }
