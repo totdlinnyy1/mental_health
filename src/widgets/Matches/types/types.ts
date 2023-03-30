@@ -7,3 +7,15 @@ export type HobbyAnswers = {
 }
 
 export type MatchModalContent = 'test' | 'result'
+
+export interface IMatchResult {
+  match: number
+  resume: string
+  recommendations: string[]
+  unrecommendation: string
+  matchedUserData: {
+    name: string
+    lastName: string
+    avatar: string
+  }
+}

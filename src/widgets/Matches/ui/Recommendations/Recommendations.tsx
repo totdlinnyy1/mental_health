@@ -1,7 +1,11 @@
 import {Box, Text, VStack} from '@chakra-ui/react'
 import {ComponentType} from 'react'
 
-const Recommendations: ComponentType = () => {
+interface IProps {
+  recommendations: string[]
+}
+
+const Recommendations: ComponentType<IProps> = ({recommendations}) => {
   return (
     <VStack spacing='8px' align='stretch'>
       <Box
@@ -14,33 +18,21 @@ const Recommendations: ComponentType = () => {
       >
         <Text fontSize='sm'>Рекомендации</Text>
       </Box>
-      <Box
-        borderRadius='base'
-        boxShadow='0 0 0 1px rgba(0, 0, 0, 0.05)'
-        padding='2'
-        h='35px'
-        bg='white'
-      >
-        <Text fontSize='sm'>1. Сделать что-то одно</Text>
-      </Box>
-      <Box
-        borderRadius='base'
-        boxShadow='0 0 0 1px rgba(0, 0, 0, 0.05)'
-        padding='2'
-        h='35px'
-        bg='white'
-      >
-        <Text fontSize='sm'>2. Сделать что-то другое</Text>
-      </Box>
-      <Box
-        borderRadius='base'
-        boxShadow='0 0 0 1px rgba(0, 0, 0, 0.05)'
-        padding='2'
-        h='35px'
-        bg='white'
-      >
-        <Text fontSize='sm'>3. Так лень это писать, если честно</Text>
-      </Box>
+
+      {recommendations.map((rec, key) => (
+        <Box
+          borderRadius='base'
+          boxShadow='0 0 0 1px rgba(0, 0, 0, 0.05)'
+          padding='2'
+          h='35px'
+          bg='white'
+          key={key}
+        >
+          <Text fontSize='sm'>
+            {key + 1}. {rec}
+          </Text>
+        </Box>
+      ))}
     </VStack>
   )
 }

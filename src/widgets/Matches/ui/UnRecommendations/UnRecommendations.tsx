@@ -1,7 +1,11 @@
 import {Box, Text, VStack} from '@chakra-ui/react'
 import {ComponentType} from 'react'
 
-const UnRecommendations: ComponentType = () => {
+interface IProps {
+  unrecommendation: string
+}
+
+const UnRecommendations: ComponentType<IProps> = ({unrecommendation}) => {
   return (
     <VStack spacing='8px' align='stretch'>
       <Box
@@ -22,9 +26,7 @@ const UnRecommendations: ComponentType = () => {
         h='35px'
         bg='white'
       >
-        <Text fontSize='sm'>
-          1. Это ужас какой-то, я устал копировать и вставлять!
-        </Text>
+        <Text fontSize='sm'>{unrecommendation}</Text>
       </Box>
     </VStack>
   )

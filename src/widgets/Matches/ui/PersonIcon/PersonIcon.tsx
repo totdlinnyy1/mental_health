@@ -3,13 +3,16 @@ import {ComponentType} from 'react'
 
 import {UserAvatar} from '@src/entities/User'
 
-const PersonIcon: ComponentType = () => {
+interface IProps {
+  name: string
+  avatar: string
+}
+
+const PersonIcon: ComponentType<IProps> = ({name, avatar}) => {
   return (
     <VStack>
-      <UserAvatar size='xl' />
-      <Text fontSize='sm' fontWeight='500'>
-        Инокентий
-      </Text>
+      <UserAvatar size='xl' name={name} avatar={avatar} />
+      <Text fontSize='sm'>{name}</Text>
     </VStack>
   )
 }

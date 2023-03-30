@@ -7,7 +7,7 @@ interface IProps {
 }
 
 const MatchQr: ComponentType<IProps> = ({userId}) => {
-  const URL = import.meta.env.VITE_API_URL
+  const URL = window.location.host
   const link = `${URL}/matches?user=${userId}`
 
   const toast = useToast()

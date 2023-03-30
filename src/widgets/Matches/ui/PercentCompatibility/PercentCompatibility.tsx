@@ -1,12 +1,19 @@
 import {Heading, Text, VStack} from '@chakra-ui/react'
 import {ComponentType} from 'react'
 
-const PercentCompatibility: ComponentType = () => {
+import {getNumberWithPercent} from '@src/share'
+
+interface IProps {
+  match: number
+  resume: string
+}
+
+const PercentCompatibility: ComponentType<IProps> = ({match, resume}) => {
   return (
     <VStack justifyContent='center'>
-      <Heading>87%</Heading>
+      <Heading>{getNumberWithPercent(match)}</Heading>
       <Text fontSize='sm' textAlign='center'>
-        Не все потеряно, вы скорее могли бы быть товарищами нежели чем друзьями
+        {resume}
       </Text>
     </VStack>
   )
