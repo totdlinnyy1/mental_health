@@ -1,4 +1,4 @@
-export const AestheticsQuestions = <const>[
+export const AestheticsQuestions = [
   'Ходил ли ты в театр за последние полгода?',
   'Тебе интересна классическая музыка?',
   'Посещал ли ты художественные выставки за последние полгода?',

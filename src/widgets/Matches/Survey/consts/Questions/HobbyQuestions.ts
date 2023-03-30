@@ -1,4 +1,4 @@
-export const HobbyQuestions = <const>[
+export const HobbyQuestions = [
   'Любишь ли ты смотреть кино?',
   'Занимался ли ты рисованием?',
   'Ты считаешь себя физически активным человеком?',

@@ -8,9 +8,7 @@ const RadioGroupQuestion: ComponentType<IProps> = ({question}: IProps) => {
   return (
     <RadioGroup w='100%'>
       <Flex>
-        <Text as='p' w='100%'>
-          {question}
-        </Text>
+        <Text w='100%'>{question}</Text>
         <Radio value='1' marginInlineEnd='6'>
           Да
         </Radio>

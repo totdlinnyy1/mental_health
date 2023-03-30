@@ -1,7 +1,7 @@
 import {Heading, VStack} from '@chakra-ui/react'
 import {ComponentType} from 'react'
 
-import {AestheticsQuestions} from '@src/widgets/Matches/Survey/consts/Questions/AestheticsQuestions'
+import {AestheticsQuestions} from '@widgets/Matches/Survey/consts/Questions/AestheticsQuestions'
 import RadioGroupQuestion from '@widgets/Matches/Survey/ui/RadioGroup/RadioGroup'
 
 const Aesthetics: ComponentType = () => {
@@ -12,7 +12,7 @@ const Aesthetics: ComponentType = () => {
         Эстетика
       </Heading>
 
-      <VStack as='div' wrap='wrap'>
+      <VStack wrap='wrap'>
         {questions.map((question, key) => {
           return <RadioGroupQuestion key={key} question={question} />
         })}
