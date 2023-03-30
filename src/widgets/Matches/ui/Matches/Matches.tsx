@@ -3,6 +3,7 @@ import {ComponentType} from 'react'
 
 import CheckMatch from '@widgets/Matches/ui/CheckMatch/CheckMatch'
 import MatchHistory from '@widgets/Matches/ui/MatchHistory/MatchHistory'
+import MatchModal from '@widgets/Matches/ui/MatchModal/MatchModal'
 import OpenTest from '@widgets/Matches/ui/OpenTest/OpenTest'
 
 const Matches: ComponentType = () => {
@@ -11,6 +12,7 @@ const Matches: ComponentType = () => {
       <CheckMatch />
       <OpenTest />
       <MatchHistory />
+      <MatchModal />
     </VStack>
   )
 }
