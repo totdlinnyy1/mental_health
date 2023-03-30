@@ -7,11 +7,11 @@ interface IProps {
 const RadioGroupQuestion: ComponentType<IProps> = ({question}: IProps) => {
   return (
     <RadioGroup w='100%'>
-      <Flex as='div'>
+      <Flex>
         <Text as='p' w='100%'>
           {question}
         </Text>
-        <Radio value='1' marginInlineEnd='1.5rem'>
+        <Radio value='1' marginInlineEnd='6'>
           Да
         </Radio>
         <Radio value='0'>Нет</Radio>
